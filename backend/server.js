@@ -4,9 +4,10 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 require("dotenv").config();
 
 const app = express();
+const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:3000";
 app.use(
   cors({
-    origin: "*", // For development. Change to your frontend URL for production
+    origin: FRONTEND_URL,
   })
 );
 app.use(express.json());

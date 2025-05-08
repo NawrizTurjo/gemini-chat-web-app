@@ -3,6 +3,8 @@ import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import "./App.css";
+const BACKEND_URL =
+  process.env.REACT_APP_BACKEND_URL || "http://localhost:3001";
 
 function App() {
   const [messages, setMessages] = useState([]); // Message display state
@@ -31,7 +33,7 @@ function App() {
 
     try {
       // Call API - send the current complete conversation history
-      const response = await fetch("http://localhost:3001/chat", {
+      const response = await fetch(`${BACKEND_URL}/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
