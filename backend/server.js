@@ -5,7 +5,6 @@ require("dotenv").config();
 
 const app = express();
 const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:3000";
-// const FRONTEND_URL = "https://gemini-chat-web-app-frontend.onrender.com";
 app.use(
   cors({
     origin: FRONTEND_URL,
