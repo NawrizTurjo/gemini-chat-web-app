@@ -3,9 +3,9 @@ import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import "./App.css";
-// const BACKEND_URL =
-//   process.env.REACT_APP_BACKEND_URL || "http://localhost:3001";
-const BACKEND_URL = "https://gemini-chat-web-app.onrender.com";
+const BACKEND_URL =
+  process.env.REACT_APP_BACKEND_URL || "http://localhost:3001";
+// const BACKEND_URL = "https://gemini-chat-web-app.onrender.com";
 
 function App() {
   const [messages, setMessages] = useState([]); // Message display state
