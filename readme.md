@@ -7,7 +7,7 @@
 
 A full-stack web application that provides a clean, interactive interface for chatting with Google's Gemini AI. This project integrates Google's Generative AI capabilities through a React frontend and Node.js backend.
 
-![Gemini Chat Demo](https://i.imgur.com/placeholder-for-your-app-screenshot.png)
+<!-- ![Gemini Chat Demo](https://media-hosting.imagekit.io/de96b654cfbf47a6/screenshot_1746883249497.png?Expires=1841491250&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=cp4FWiaw0bXdGn-nY~b5C7qF5lgVVgFcgNLwqREgor~By1dmgNTs1yLTmCeBsYTRd8Sgq0PWIrBDAIjneJ4BLbwdgiN0J-TLeueS4IeIZge647qw6qyqAKDqDnc3iai8jxcjpR1ZPyLFMgIEpKPx8txAUbpb0N3xqRZL8uN9Q4GD0YxfIZ86C9~8ot~2oPMtXE4ZL30AxA3kQIv169XtEUZUzw0AUOlGZTe15RlAcvajFIu4p4K58GQTwuEdsxVaaX9eg7H7bfIQoIIjCesd8rhA9OjqiUdBSafigz9X99nnpYBmXcD2F87Ye39dvnvnnjIimz0JQNGO2tw2b533zw__) -->
 
 ## 📋 Table of Contents
 
@@ -25,6 +25,7 @@ A full-stack web application that provides a clean, interactive interface for ch
     - [Development Mode](#development-mode)
     - [Quick Start (with Docker)](#quick-start-with-docker)
   - [💬 How to Use](#-how-to-use)
+    - [Usage Guide](#usage-guide)
   - [🔌 API Endpoints](#-api-endpoints)
   - [🌐 Deployment](#-deployment)
     - [Backend Deployment](#backend-deployment)
@@ -32,8 +33,6 @@ A full-stack web application that provides a clean, interactive interface for ch
   - [🔗 Live Demo](#-live-demo)
     - [About the Demo](#about-the-demo)
   - [❓ Troubleshooting](#-troubleshooting)
-  - [🚧 Future Improvements](#-future-improvements)
-  - [📝 License](#-license)
 
 ## ✨ Features
 
@@ -46,12 +45,14 @@ A full-stack web application that provides a clean, interactive interface for ch
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - React 19
 - React Markdown for rendering formatted responses
 - React Syntax Highlighter for code snippets
 - CSS3 with responsive design principles
 
 ### Backend
+
 - Node.js with Express
 - Google Generative AI SDK
 - CORS for secure cross-origin requests
@@ -102,8 +103,8 @@ npm install
 ```
 
 3. Configure environment variables:
-    - Create a `.env` file in the backend directory
-    - Add your Gemini API key:
+   - Create a `.env` file in the backend directory
+   - Add your Gemini API key:
 
 ```
 GEMINI_API_KEY=your_api_key_here
@@ -131,6 +132,7 @@ npm start
 ```
 
 This will start the server on port 3001 (or your specified PORT in .env).
+
 </details>
 
 <details>
@@ -142,6 +144,7 @@ npm start
 ```
 
 This will start the React development server on port 3000 and automatically open your browser.
+
 </details>
 
 ### Quick Start (with Docker)
@@ -154,7 +157,9 @@ docker-compose up
 
 ## 💬 How to Use
 
-![Usage Guide](https://i.imgur.com/placeholder-for-usage-guide.gif)
+<!-- ![Usage Guide](https://i.imgur.com/placeholder-for-usage-guide.gif) -->
+
+### Usage Guide
 
 1. Open the application in your browser at http://localhost:3000
 2. Type your message in the input field at the bottom
@@ -169,21 +174,21 @@ The backend provides the following endpoint:
 
 - **POST /chat**: Send a message to Gemini AI
   - Request body:
-     ```json
-     {
-        "message": "Your message here",
-        "history": [
-          {"role": "user", "content": "Previous user message"},
-          {"role": "assistant", "content": "Previous AI response"}
-        ]
-     }
-     ```
+    ```json
+    {
+      "message": "Your message here",
+      "history": [
+        { "role": "user", "content": "Previous user message" },
+        { "role": "assistant", "content": "Previous AI response" }
+      ]
+    }
+    ```
   - Response:
-     ```json
-     {
-        "response": "AI response text with markdown formatting"
-     }
-     ```
+    ```json
+    {
+      "response": "AI response text with markdown formatting"
+    }
+    ```
 
 ## 🌐 Deployment
 
@@ -200,10 +205,10 @@ The backend can be deployed to any Node.js hosting service like Heroku, Render, 
 The React frontend can be deployed to services like Netlify, Vercel, or GitHub Pages:
 
 1. Build the production version:
-    ```bash
-    cd frontend
-    npm run build
-    ```
+   ```bash
+   cd frontend
+   npm run build
+   ```
 2. Deploy the contents of the `build` directory to your hosting service
 3. Make sure to configure the backend API URL in your frontend code or environment variables
 
@@ -213,7 +218,8 @@ A live version of this application is deployed and available for public use. You
 
 <div align="center">
   <a href="https://gemini-chat-web-app-frontend.onrender.com/" target="_blank">
-     <img src="https://i.imgur.com/placeholder-for-demo-button.png" alt="Try Now Button" width="200"/>
+     <!-- <img src="https://i.imgur.com/placeholder-for-demo-button.png" alt="Try Now Button" width="200"/> -->
+     Try Now
   </a>
 </div>
 
@@ -229,24 +235,24 @@ Try it out by visiting the link and starting a conversation with Gemini AI!
 
 ## ❓ Troubleshooting
 
-| Issue | Solution |
-|-------|----------|
-| CORS errors | Ensure the FRONTEND_URL in your backend .env file matches your frontend URL exactly |
-| Slow responses | Check your internet connection and the Gemini API status |
-| "API key not valid" | Verify your GEMINI_API_KEY in the .env file |
-| Application not starting | Make sure all dependencies are installed and Node.js is v16+ |
+| Issue                    | Solution                                                                            |
+| ------------------------ | ----------------------------------------------------------------------------------- |
+| CORS errors              | Ensure the FRONTEND_URL in your backend .env file matches your frontend URL exactly |
+| Slow responses           | Check your internet connection and the Gemini API status                            |
+| "API key not valid"      | Verify your GEMINI_API_KEY in the .env file                                         |
+| Application not starting | Make sure all dependencies are installed and Node.js is v16+                        |
 
-## 🚧 Future Improvements
+<!-- ## 🚧 Future Improvements
 
 - 🔐 Add user authentication
 - 💾 Implement persistent storage for chat history
 - 🖼️ Support for image inputs
 - 🎨 Theme customization options
-- 📱 Mobile app version
+- 📱 Mobile app version -->
 
-## 📝 License
+<!-- ## 📝 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the LICENSE file for details. -->
 
 ---
 
